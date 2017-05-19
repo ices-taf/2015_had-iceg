@@ -1,20 +1,14 @@
 ## Gather TAF input and output tables to be uploaded
 
-## Before: catch.csv, survey.csv, dls.txt (db, output)
-## After:  catch.csv, survey.csv, dls.txt (upload)
+## Before: catage.csv, maturity.csv, smb.csv, smh.csv, wcatch.csv, wstock.csv,
+##         fatage.csv, natage.csv, summary.csv (db, output)
+## After:  catage.csv, maturity.csv, smb.csv, smh.csv, wcatch.csv, wstock.csv,
+##         fatage.csv, natage.csv, summary.csv (upload)
+
+require(icesTAF, quietly=TRUE)
 
 mkdir("upload/input")
 mkdir("upload/output")
 
-## Input
-cp("db/catage.csv", "upload/input")
-cp("db/maturity.csv", "upload/input")
-cp("db/smb.csv", "upload/input")
-cp("db/smh.csv", "upload/input")
-cp("db/wcatch.csv", "upload/input")
-cp("db/wstock.csv", "upload/input")
-
-## Output
-cp("output/fatage.csv", "upload/output")
-cp("output/natage.csv", "upload/output")
-cp("output/summary.csv", "upload/output")
+cp("db/*.csv", "upload/input")
+cp("output/*.csv", "upload/output")

@@ -1,4 +1,4 @@
-## Convert data to model format, write model input file
+## Convert data to model format, write model input files
 
 ## Before: catageysa.dat (db)
 ## After:  catageysa.dat (input)
