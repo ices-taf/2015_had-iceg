@@ -21,7 +21,7 @@ write.taf(catage, "upload/report/catage_rep.csv")
 ## smh (skip year)
 smh <- read.taf("upload/input/smh.csv")
 smh <- na.omit(smh)
-write.taf(smh, "upload/input/smh_rep.csv")
+write.taf(smh, "upload/report/smh_rep.csv")
 
 ## wstock (trim year and age)
 wstock <- read.taf("upload/input/wstock.csv")
