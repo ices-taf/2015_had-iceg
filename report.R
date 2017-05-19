@@ -6,7 +6,7 @@
 
 require(icesTAF, quietly=TRUE)
 
-dir.create("upload/report", showWarnings=FALSE, recursive=TRUE)
+mkdir("upload/report")
 
 ## catage (plus group)
 catage <- read.taf("upload/input/catage.csv")

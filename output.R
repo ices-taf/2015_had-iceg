@@ -5,7 +5,7 @@
 
 require(icesTAF, quietly=TRUE)
 
-dir.create("output", showWarnings=FALSE)
+mkdir("output")
 
 rby <- read.table("model/resultsbyyear", header=TRUE, check.names=FALSE)
 rbya <- read.table("model/resultsbyyearandage", header=TRUE)

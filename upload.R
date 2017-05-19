@@ -3,18 +3,18 @@
 ## Before: catch.csv, survey.csv, dls.txt (db, output)
 ## After:  catch.csv, survey.csv, dls.txt (upload)
 
-dir.create("upload/input", showWarnings=FALSE, recursive=TRUE)
-dir.create("upload/output", showWarnings=FALSE)
+mkdir("upload/input")
+mkdir("upload/output")
 
 ## Input
-invisible(file.copy("db/catage.csv", "upload/input/catage.csv", overwrite=TRUE))
-invisible(file.copy("db/maturity.csv", "upload/input/maturity.csv", overwrite=TRUE))
-invisible(file.copy("db/smb.csv", "upload/input/smb.csv", overwrite=TRUE))
-invisible(file.copy("db/smh.csv", "upload/input/smh.csv", overwrite=TRUE))
-invisible(file.copy("db/wcatch.csv", "upload/input/wcatch.csv", overwrite=TRUE))
-invisible(file.copy("db/wstock.csv", "upload/input/wstock.csv", overwrite=TRUE))
+cp("db/catage.csv", "upload/input/catage.csv")
+cp("db/maturity.csv", "upload/input/maturity.csv")
+cp("db/smb.csv", "upload/input/smb.csv")
+cp("db/smh.csv", "upload/input/smh.csv")
+cp("db/wcatch.csv", "upload/input/wcatch.csv")
+cp("db/wstock.csv", "upload/input/wstock.csv")
 
 ## Output
-invisible(file.copy("output/fatage.csv", "upload/output/fatage.csv", overwrite=TRUE))
-invisible(file.copy("output/natage.csv", "upload/output/natage.csv", overwrite=TRUE))
-invisible(file.copy("output/summary.csv", "upload/output/summary.csv", overwrite=TRUE))
+cp("output/fatage.csv", "upload/output/fatage.csv")
+cp("output/natage.csv", "upload/output/natage.csv")
+cp("output/summary.csv", "upload/output/summary.csv")

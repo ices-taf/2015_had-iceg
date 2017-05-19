@@ -9,7 +9,7 @@ source("utilities.R")
 
 ftp <- "https://raw.githubusercontent.com/ices-taf/ftp/master/nwwg/2015/had-iceg/"
 
-dir.create("db", showWarnings=FALSE)
+mkdir("db")
 
 ## Download data
 download.file(paste0(ftp,"db/catageysa.dat"), "db/catageysa.dat", quiet=TRUE)
@@ -18,7 +18,7 @@ txt <- readLines("db/catageysa.dat", encoding="latin1")
 ## Extract tables from original source
 db <- extractInput(txt)
 
-## Write tables to local FTP directory
+## Write TAF tables to db directory
 write.taf(db$catage, "db/catage.csv")
 write.taf(db$wcatch, "db/wcatch.csv")
 write.taf(db$maturity, "db/maturity.csv")
