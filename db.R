@@ -19,9 +19,9 @@ txt <- readLines("db/catageysa.dat", encoding="latin1")
 db <- extractInput(txt)
 
 ## Write TAF tables to db directory
-write.taf(db$catage, "db/catage.csv")
-write.taf(db$wcatch, "db/wcatch.csv")
-write.taf(db$maturity, "db/maturity.csv")
-write.taf(db$wstock, "db/wstock.csv")
-write.taf(db$smb, "db/smb.csv")
-write.taf(db$smh, "db/smh.csv")
+write.taf(db$catage, "db/catage.csv")     # 1.2
+write.taf(db$smb, "db/smb.csv")           # 1.3
+write.taf(db$smh, "db/smh.csv")           # 1.4
+write.taf(db$wstock, "db/wstock.csv")     # 1.5
+write.taf(db$wcatch, "db/wcatch.csv")     # 1.6
+write.taf(db$maturity, "db/maturity.csv") # 1.7
