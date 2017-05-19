@@ -8,4 +8,4 @@ require(icesTAF, quietly=TRUE)
 mkdir("input")
 
 ## Copy model input file to input directory
-cp("db/catageysa.dat", "input/catageysa.dat")
+cp("db/catageysa.dat", "input")
