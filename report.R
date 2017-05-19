@@ -1,8 +1,11 @@
 ## Prepare tables for report
 
-## Before: catage.csv, smh.csv, wstock.csv, wcatch.csv, maturity.csv,
-##         summary.csv, natage.csv, fatage.csv (upload)
-## After:  *_rep.csv (upload)
+## Before: catage.csv, smh.csv, wstock.csv, wcatch.csv,
+##         maturity.csv, summary.csv, natage.csv,
+##         fatage.csv (upload)
+## After:  catage_rep.csv, smh_rep.csv, wstock_rep.csv, wcatch_rep.csv,
+##         maturity_rep.csv, summary_rep.csv, natage_rep.csv,
+##         fatage_rep.csv (upload)
 
 require(icesTAF, quietly=TRUE)
 
