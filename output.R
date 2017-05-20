@@ -3,7 +3,7 @@
 ## Before: resultsbyyear, resultsbyyearandage (model)
 ## After:  summary.csv, natage.csv, fatage.csv (output)
 
-require(icesTAF, quietly=TRUE)
+library(icesTAF)
 
 mkdir("output")
 

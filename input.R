@@ -3,7 +3,7 @@
 ## Before: catageysa.dat (db)
 ## After:  catageysa.dat (input)
 
-require(icesTAF, quietly=TRUE)
+library(icesTAF)
 
 mkdir("input")
 

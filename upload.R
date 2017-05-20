@@ -5,7 +5,7 @@
 ## After:  catage.csv, maturity.csv, smb.csv, smh.csv, wcatch.csv, wstock.csv,
 ##         fatage.csv, natage.csv, summary.csv (upload)
 
-require(icesTAF, quietly=TRUE)
+library(icesTAF)
 
 mkdir("upload/input")
 mkdir("upload/output")

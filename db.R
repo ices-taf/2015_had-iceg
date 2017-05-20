@@ -4,7 +4,7 @@
 ## After:  catageysa.dat, catage.csv, wcatch.csv, maturity.csv, wstock.csv,
 ##         smb.csv, smh.csv (db)
 
-require(icesTAF, quietly=TRUE)
+library(icesTAF)
 source("utilities.R")
 
 ftp <- "https://raw.githubusercontent.com/ices-taf/ftp/master/nwwg/2015/had-iceg/"

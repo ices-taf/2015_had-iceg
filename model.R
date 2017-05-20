@@ -3,7 +3,7 @@
 ## Before: catageysa(.exe), catageysa.dat (ftp, input)
 ## After:  resultsbyyear, resultsbyyearandage (model)
 
-require(icesTAF, quietly=TRUE)
+library(icesTAF)
 
 ftp <- "https://raw.githubusercontent.com/ices-taf/ftp/master/nwwg/2015/had-iceg/"
 
