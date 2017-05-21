@@ -18,7 +18,7 @@ txt <- readLines("db/catageysa.dat", encoding="latin1")
 ## Extract tables from original source
 db <- extractInput(txt)
 
-## Write TAF tables to db directory
+## Write tables to db directory
 write.taf(db$catage, "db/catage.csv")     # 1.2
 write.taf(db$smb, "db/smb.csv")           # 1.3
 write.taf(db$smh, "db/smh.csv")           # 1.4
