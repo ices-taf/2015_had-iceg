@@ -19,4 +19,4 @@ cp("input/catageysa.dat", "model")
 
 ## Run model
 setwd("model")
-system("catageysa")
+system("./catageysa")
