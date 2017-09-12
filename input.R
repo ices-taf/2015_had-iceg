@@ -1,6 +1,6 @@
 ## Convert data to model format, write model input files
 
-## Before: catageysa.dat (db)
+## Before: catageysa.dat (data)
 ## After:  catageysa.dat (input)
 
 library(icesTAF)
@@ -8,4 +8,4 @@ library(icesTAF)
 mkdir("input")
 
 ## Copy model input file to input directory
-cp("db/catageysa.dat", "input")
+cp("data/catageysa.dat", "input")
