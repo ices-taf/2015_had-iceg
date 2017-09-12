@@ -10,5 +10,5 @@ library(icesTAF)
 mkdir("upload/input")
 mkdir("upload/output")
 
-cp("db/*.csv", "upload/input")
+cp("data/*.csv", "upload/input")
 cp("output/*.csv", "upload/output")
