@@ -1,18 +1,18 @@
-## Download and preprocess data, write TAF input tables
+## Preprocess data, write TAF data tables
 
-## Before: catageysa.dat (ftp)
+## Before: catageysa.dat (TAF database)
 ## After:  catageysa.dat, catage.csv, wcatch.csv, maturity.csv, wstock.csv,
 ##         smb.csv, smh.csv (data)
 
 library(icesTAF)
 source("utilities.R")
 
-ftp <- "https://raw.githubusercontent.com/ices-taf/ftp/master/nwwg/2015/had-iceg/"
-
 mkdir("data")
 
+url <- "http://taf.ices.local/taf/fs/2015_had-iceg/raw/"
+
 ## Download data
-download.file(paste0(ftp,"raw/catageysa.dat"), "data/catageysa.dat", quiet=TRUE)
+download.file(paste0(url,"catageysa.dat"), "data/catageysa.dat", quiet=TRUE)
 txt <- readLines("data/catageysa.dat", encoding="latin1")
 
 ## Extract tables from original source
