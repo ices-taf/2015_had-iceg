@@ -1,42 +1,40 @@
 ## Prepare tables for report
 
-## Before: catage.csv, smh.csv, wstock.csv, wcatch.csv,
-##         maturity.csv, summary.csv, natage.csv,
-##         fatage.csv (upload)
-## After:  catage_rep.csv, smh_rep.csv, wstock_rep.csv, wcatch_rep.csv,
-##         maturity_rep.csv, summary_rep.csv, natage_rep.csv,
-##         fatage_rep.csv (upload)
+## Before: catage.csv, smh.csv, wstock.csv, wcatch.csv, maturity.csv,
+##         summary.csv, natage.csv, fatage.csv (data, output)
+## After:  catage.csv, smh.csv, wstock.csv, wcatch.csv, maturity.csv,
+##         summary.csv, natage.csv, fatage.csv (report)
 
 library(icesTAF)
 
-mkdir("table")
+mkdir("report")
 
 ## catage (plus group)
 catage <- read.taf("data/catage.csv")
 catage$"10" <- rowSums(catage[as.character(10:14)])
 catage <- catage[c("Year", as.character(2:10))]
 names(catage)[names(catage)=="10"] <- "10+"
-write.taf(catage, "table/catage_rep.csv")
+write.taf(catage, "report/catage.csv")
 
 ## smh (skip year)
 smh <- read.taf("data/smh.csv")
 smh <- na.omit(smh)
-write.taf(smh, "table/smh_rep.csv")
+write.taf(smh, "report/smh.csv")
 
 ## wstock (trim year and age)
 wstock <- read.taf("data/wstock.csv")
 wstock <- head(wstock, -1)[c("Year",as.character(1:10))]
-write.taf(wstock, "table/wstock_rep.csv")
+write.taf(wstock, "report/wstock.csv")
 
 ## wcatch (trim year and age)
 wcatch <- read.taf("data/wcatch.csv")
 wcatch <- head(wcatch, -2)[c("Year",as.character(2:10))]
-write.taf(wcatch, "table/wcatch_rep.csv")
+write.taf(wcatch, "report/wcatch.csv")
 
 ## maturity (trim year and age)
 maturity <- read.taf("data/maturity.csv")
 maturity <- head(maturity, -1)[c("Year",as.character(2:10))]
-write.taf(maturity, "table/maturity_rep.csv")
+write.taf(maturity, "report/maturity.csv")
 
 ## summary (trim year, insert NA, average, round)
 summary <- read.taf("output/summary.csv")
@@ -47,7 +45,7 @@ avg["Year"] <- paste0("Mean79-", summary$Year[nrow(summary)-1])
 summary <- rbind(summary, avg)
 summary[c("Rec","RefB","SSB","Landings")] <- round(summary[c("Rec","RefB","SSB","Landings")])
 summary[c("YoverSSB","Fbar")] <- round(summary[c("YoverSSB","Fbar")], 3)
-write.taf(summary, "table/summary_rep.csv")
+write.taf(summary, "report/summary.csv")
 
 ## natage (trim year and age, change units, round)
 natage <- read.taf("output/natage.csv")
@@ -55,10 +53,10 @@ natage <- head(natage, -2)[c("Year", as.character(1:10))]
 natage <- natage / 1000
 natage[as.character(1:5)] <- round(natage[as.character(1:5)], 1)
 natage[as.character(6:10)] <- round(natage[as.character(6:10)], 2)
-write.taf(natage, "table/natage_rep.csv")
+write.taf(natage, "report/natage.csv")
 
 ## fatage (trim year and age)
 fatage <- read.taf("output/fatage.csv")
 fatage <- head(fatage, -2)[c("Year", as.character(2:10))]
 fatage <- round(fatage, 3)
-write.taf(fatage, "table/fatage_rep.csv")
+write.taf(fatage, "report/fatage.csv")
