@@ -11,7 +11,7 @@ mkdir("data")
 
 url <- "http://taf.ices.local/taf/fs/2015_had-iceg/raw/"
 
-## Download data
+## Download data, this file will later be moved to input
 download.file(paste0(url,"catageysa.dat"), "data/catageysa.dat", quiet=TRUE)
 txt <- readLines("data/catageysa.dat", encoding="latin1")
 
