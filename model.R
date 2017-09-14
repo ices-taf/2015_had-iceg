@@ -7,7 +7,7 @@ library(icesTAF)
 
 mkdir("model")
 
-url <- "http://taf.ices.local/taf/fs/2015_had-iceg/model/"
+url <- "https://raw.githubusercontent.com/ices-taf/ftp/master/nwwg/2015/had-iceg/model/"
 
 ## Get model executable
 catageysa <- if(.Platform$OS.type == "unix") "catageysa" else "catageysa.exe"
