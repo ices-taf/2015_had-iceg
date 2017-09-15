@@ -9,7 +9,7 @@ source("utilities.R")
 
 mkdir("data")
 
-url <- "https://raw.githubusercontent.com/ices-taf/ftp/master/nwwg/2015/had-iceg/raw/"
+url <- "http://taf.ices.local/taf/fs/2015_had-iceg/raw/"
 
 ## Download data, this file will later be moved to input
 download.file(paste0(url,"catageysa.dat"), "data/catageysa.dat", quiet=TRUE)
