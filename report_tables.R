@@ -36,14 +36,15 @@ maturity <- read.taf("data/maturity.csv")
 maturity <- head(maturity, -1)[c("Year",as.character(2:10))]
 write.taf(maturity, "report/maturity.csv")
 
-## summary (trim year, insert NA, average, round)
+## summary (select columns, trim year, insert NA, average, round)
 summary <- read.taf("output/summary.csv")
+summary$RefB <- summary$HR <- NULL
 summary <- head(summary, -4)
 summary$Fbar[nrow(summary)] <- NA
 avg <- as.data.frame(t(colMeans(head(summary,-1), na.rm=TRUE)))
 avg["Year"] <- paste0("Mean79-", summary$Year[nrow(summary)-1])
 summary <- rbind(summary, avg)
-summary[c("Rec","RefB","SSB","Landings")] <- round(summary[c("Rec","RefB","SSB","Landings")])
+summary[c("Rec","B3plus","SSB","Landings")] <- round(summary[c("Rec","B3plus","SSB","Landings")])
 summary[c("YoverSSB","Fbar")] <- round(summary[c("YoverSSB","Fbar")], 3)
 write.taf(summary, "report/summary.csv")
 
