@@ -11,8 +11,7 @@ url <- "https://raw.githubusercontent.com/ices-taf/ftp/master/nwwg/2015/had-iceg
 
 ## Get model executable
 catageysa <- if(.Platform$OS.type == "unix") "catageysa" else "catageysa.exe"
-download.file(paste0(url,catageysa), paste0("model/",catageysa), quiet=TRUE)
-Sys.chmod(paste0("model/", catageysa))
+download(paste0(url,catageysa), "model")
 
 ## Get model input file
 cp("input/catageysa.dat", "model")
