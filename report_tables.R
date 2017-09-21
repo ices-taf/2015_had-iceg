@@ -51,7 +51,7 @@ write.taf(summary, "report/summary.csv")
 ## natage (trim year and age, change units, round)
 natage <- read.taf("output/natage.csv")
 natage <- head(natage, -2)[c("Year", as.character(1:10))]
-natage <- natage / 1000
+natage[-1] <- natage[-1] / 1000
 natage[as.character(1:5)] <- round(natage[as.character(1:5)], 1)
 natage[as.character(6:10)] <- round(natage[as.character(6:10)], 2)
 write.taf(natage, "report/natage.csv")
