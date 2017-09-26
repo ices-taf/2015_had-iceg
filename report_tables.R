@@ -1,7 +1,7 @@
 ## Prepare tables for report
 
-## Before: catage.csv, smh.csv, wstock.csv, wcatch.csv, maturity.csv,
-##         summary.csv, natage.csv, fatage.csv (data, output)
+## Before: catage.csv, smh.csv, wstock.csv, wcatch.csv, maturity.csv (data)
+##         summary.csv, natage.csv, fatage.csv (output)
 ## After:  catage.csv, smh.csv, wstock.csv, wcatch.csv, maturity.csv,
 ##         summary.csv, natage.csv, fatage.csv (report)
 
