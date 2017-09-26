@@ -1,6 +1,6 @@
 ## Run analysis, write model results
 
-## Before: catageysa(.exe), catageysa.dat (TAF database, input)
+## Before: catageysa, (TAF database), catageysa.dat (input)
 ## After:  resultsbyyear, resultsbyyearandage (model)
 
 library(icesTAF)
