@@ -11,11 +11,11 @@ mkdir("data")
 
 url <- "https://raw.githubusercontent.com/ices-taf/ftp/master/nwwg/2015/had-iceg/raw/"
 
-## Download data, this file will later be moved to input
-download(paste0(url,"catageysa.dat"), "data")
+## Download data
+download(paste0(url,"catageysa.dat"), "data")  # later moved to input
 txt <- readLines("data/catageysa.dat", encoding="latin1")
 
-## Extract tables from original source
+## Extract tables
 data <- extractInput(txt)
 
 ## Write tables to data directory
