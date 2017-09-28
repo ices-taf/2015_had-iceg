@@ -1,8 +1,8 @@
 ## Preprocess data, write TAF data tables
 
 ## Before: catageysa.dat (TAF database)
-## After:  catageysa.dat, catage.csv, wcatch.csv, maturity.csv, wstock.csv,
-##         smb.csv, smh.csv (data)
+## After:  catage.csv, catageysa.dat, maturity.csv, smb.csv, smh.csv,
+##         wcatch.csv, wstock.csv (data)
 
 library(icesTAF)
 source("utilities.R")

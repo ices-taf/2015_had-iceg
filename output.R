@@ -1,7 +1,7 @@
 ## Extract model results of interest, write TAF output tables
 
 ## Before: resultsbyyear, resultsbyyearandage (model)
-## After:  summary.csv, natage.csv, fatage.csv (output)
+## After:  fatage.csv, natage.csv, summary.csv (output)
 
 library(icesTAF)
 

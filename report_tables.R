@@ -1,9 +1,9 @@
 ## Prepare tables for report
 
-## Before: catage.csv, smh.csv, wstock.csv, wcatch.csv, maturity.csv (data),
-##         summary.csv, natage.csv, fatage.csv (output)
-## After:  catage.csv, smh.csv, wstock.csv, wcatch.csv, maturity.csv,
-##         summary.csv, natage.csv, fatage.csv (report)
+## Before: catage.csv, maturity.csv, smh.csv, wcatch.csv, wstock.csv (data),
+##         fatage.csv, natage.csv, summary.csv (output)
+## After:  catage.csv, fatage.csv, maturity.csv, natage.csv, smh.csv,
+##         summary.csv, wcatch.csv, wstock.csv (report)
 
 library(icesTAF)
 

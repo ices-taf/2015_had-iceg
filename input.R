@@ -7,5 +7,5 @@ library(icesTAF)
 
 mkdir("input")
 
-## Copy model input file to input directory
+## Move model input file to input directory
 cp("data/catageysa.dat", "input", move=TRUE)

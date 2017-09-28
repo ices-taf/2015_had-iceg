@@ -1,7 +1,7 @@
 ## Prepare plots to demonstrate TAF
 
 ## Before: summary.csv (output)
-## After:  biomass.png, landings.png, harvest_rate.png, recruitment.png (report)
+## After:  biomass.png, harvest_rate.png, landings.png, recruitment.png (report)
 
 library(icesTAF)
 
