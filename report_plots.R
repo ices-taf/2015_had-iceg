@@ -10,12 +10,10 @@ mkdir("report")
 ## Trim year, change units
 summary <- read.taf("output/summary.csv")
 x <- summary[summary$Year<=2016,]
-x$Rec <- x$Rec / 1000
-x$B3plus <- x$B3plus / 1000
-x$SSB <- x$SSB / 1000
-x$RefB <- x$RefB / 1000
-x$Landings <- x$Landings / 1000
+x[c("Rec","B3plus","SSB","RefB","Landings")] <-
+  x[c("Rec","B3plus","SSB","RefB","Landings")] / 1000
 
+## Plots
 tafpng("biomass")
 plot(SSB~Year, x, type="l", lwd=2, ylim=lim(x$SSB), yaxs="i",
      ylab="SSB (1000 t)", main="Spawning stock biomass")
