@@ -21,23 +21,23 @@ abline(h=45, lwd=3, col="orange")
 abline(h=45, lwd=2, lty=2)
 legend("topleft", c("Btrigger","Blim"), lwd=3:2, lty=1:2,
        col=c("orange","black"), bty="n")
-ido()
+dev.off()
 
 tafpng("harvest_rate")
 plot(HR~Year, x, subset=Year<=2014, type="l", lwd=2, ylim=lim(x$HR),
      yaxs="i", ylab="Harvest rate", main="Harvest rate")
 abline(h=c(0.40), lty=2, lwd=2)
 legend("bottomleft", "HRtarget", lty=2, lwd=2, bty="n")
-ido()
+dev.off()
 
 tafpng("landings")
 barplot(x$Landings[x$Year<=2014], names=x$Year[x$Year<=2014], col="#8bc2b6",
         ylim=lim(x$Landings), ylab="Landings (1000 t)", main="Landings")
 box()
-ido()
+dev.off()
 
 tafpng("recruitment")
 barplot(x$Rec, names=x$Year, ylim=lim(x$Rec), col="#424242",
         ylab="Recruitment (millions)", main="Recruitment (age 2)")
 box()
-ido()
+dev.off()
