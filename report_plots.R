@@ -1,4 +1,4 @@
-## Prepare plots to demonstrate TAF
+## Prepare plots for report
 
 ## Before: summary.csv (output)
 ## After:  biomass.png, harvest_rate.png, landings.png, recruitment.png (report)
