@@ -1,5 +1,5 @@
 extractInput <- function(txt)
-#### txt: Icelandic haddock input file contents in readLines format
+### txt: Icelandic haddock input file contents in readLines format
 {
   ## 0  Dimensions
   ## Variable names from catageysa.tpl
