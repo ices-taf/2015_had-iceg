@@ -1,2 +1,2 @@
-source("report_plots.R")
-source("report_tables.R")
+sourceTAF("report_plots.R", quiet=TRUE)
+sourceTAF("report_tables.R", quiet=TRUE)
