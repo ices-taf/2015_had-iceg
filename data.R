@@ -5,7 +5,7 @@
 ##         wcatch.csv, wstock.csv (data)
 
 library(icesTAF)
-source("utilities.R", local=TRUE)
+source("utilities.R")
 
 mkdir("data")
 
