@@ -44,16 +44,16 @@ summary$Fbar[nrow(summary)] <- NA
 avg <- as.data.frame(t(colMeans(head(summary,-1), na.rm=TRUE)))
 avg["Year"] <- paste0("Mean79-", summary$Year[nrow(summary)-1])
 summary <- rbind(summary, avg)
-summary[c("Rec","B3plus","SSB","Landings")] <- round(summary[c("Rec","B3plus","SSB","Landings")])
-summary[c("YoverSSB","Fbar")] <- round(summary[c("YoverSSB","Fbar")], 3)
+summary <- rnd(summary, c("Rec","B3plus","SSB","Landings"))
+summary <- rnd(summary, c("YoverSSB","Fbar"), 3)
 write.taf(summary, "report/summary.csv")
 
 ## natage (trim year and age, change units, round)
 natage <- read.taf("output/natage.csv")
 natage <- head(natage, -2)[c("Year", as.character(1:10))]
 natage[-1] <- natage[-1] / 1000
-natage[as.character(1:5)] <- round(natage[as.character(1:5)], 1)
-natage[as.character(6:10)] <- round(natage[as.character(6:10)], 2)
+natage <- rnd(natage, as.character(1:5), 1)
+natage <- rnd(natage, as.character(6:10), 2)
 write.taf(natage, "report/natage.csv")
 
 ## fatage (trim year and age)
