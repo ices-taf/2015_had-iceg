@@ -1,8 +1,8 @@
 ## Prepare tables for report
 
-## Before: catage.csv, maturity.csv, smh.csv, wcatch.csv, wstock.csv (data),
-##         fatage.csv, natage.csv, summary.csv (output)
-## After:  catage.csv, fatage.csv, maturity.csv, natage.csv, smh.csv,
+## Before: catage.csv, maturity.csv, survey_smh.csv, wcatch.csv,
+##         wstock.csv (data), fatage.csv, natage.csv, summary.csv (output)
+## After:  catage.csv, fatage.csv, maturity.csv, natage.csv, survey_smh.csv,
 ##         summary.csv, wcatch.csv, wstock.csv (report)
 
 library(icesTAF)
@@ -16,10 +16,10 @@ catage <- catage[c("Year", as.character(2:10))]
 names(catage)[names(catage)=="10"] <- "10+"
 write.taf(catage, "report/catage.csv")
 
-## smh (skip year)
-smh <- read.taf("data/smh.csv")
-smh <- na.omit(smh)
-write.taf(smh, "report/smh.csv")
+## survey_smh (skip year)
+survey_smh <- read.taf("data/survey_smh.csv")
+survey_smh <- na.omit(survey_smh)
+write.taf(survey_smh, "report/survey_smh.csv")
 
 ## wstock (trim year and age)
 wstock <- read.taf("data/wstock.csv")
