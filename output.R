@@ -37,6 +37,6 @@ row.names(fatage) <- NULL
 fatage[fatage<0] <- NA
 
 ## Write tables to output directory
-write.taf(summary, "output/summary.csv") # 2.1
-write.taf(natage, "output/natage.csv")   # 2.2
-write.taf(fatage, "output/fatage.csv")   # 2.3
+write.taf(summary, "output/summary.csv")  # 2.1
+write.taf(natage, "output/natage.csv")    # 2.2
+write.taf(fatage, "output/fatage.csv")    # 2.3
