@@ -1,6 +1,6 @@
 ## Preprocess data, write TAF data tables
 
-## Before: catageysa.dat (TAF database)
+## Before: catageysa.dat (begin/data)
 ## After:  catage.csv, catageysa.dat, maturity.csv, survey_smb.csv,
 ##         survey_smh.csv, wcatch.csv, wstock.csv (data)
 
@@ -9,17 +9,15 @@ source("utilities.R")
 
 mkdir("data")
 
-url <- "https://raw.githubusercontent.com/ices-taf/ftp/master/nwwg/2015/had-iceg/raw/"
-
-## Download data
-setwd("data")
-download(paste0(url,"catageysa.dat"))  # later moved to input
-txt <- readLines("catageysa.dat", encoding="latin1")
+## Read data
+cp("begin/data/catageysa.dat", "data")  # later moved to input
+txt <- readLines("data/catageysa.dat")
 
 ## Extract tables
 data <- extractInput(txt)
 
 ## Write tables to data directory
+setwd("data")
 write.taf(data$catage, "catage.csv")     # 1.2
 write.taf(data$smb, "survey_smb.csv")    # 1.3
 write.taf(data$smh, "survey_smh.csv")    # 1.4
