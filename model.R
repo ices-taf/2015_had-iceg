@@ -9,7 +9,7 @@ mkdir("model")
 
 ## Get model executable
 catageysa <- if(.Platform$OS.type == "unix") "catageysa" else "catageysa.exe"
-cp(paste0("begin/model/",catageysa), "model")
+cp(file.path("begin/model",catageysa), "model")
 
 ## Get model input file
 cp("input/catageysa.dat", "model")
