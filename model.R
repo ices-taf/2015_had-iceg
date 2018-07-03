@@ -1,6 +1,6 @@
 ## Run analysis, write model results
 
-## Before: catageysa (begin/model), catageysa.dat (input)
+## Before: catageysa (begin/initial/model), catageysa.dat (input)
 ## After:  resultsbyyear, resultsbyyearandage (model)
 
 library(icesTAF)
@@ -9,7 +9,7 @@ mkdir("model")
 
 ## Get model executable
 catageysa <- if(.Platform$OS.type == "unix") "catageysa" else "catageysa.exe"
-cp(file.path("begin/model",catageysa), "model")
+cp(file.path("begin/initial/model",catageysa), "model")
 
 ## Get model input file
 cp("input/catageysa.dat", "model")

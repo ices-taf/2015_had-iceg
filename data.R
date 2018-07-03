@@ -1,6 +1,6 @@
 ## Preprocess data, write TAF data tables
 
-## Before: catageysa.dat (begin/data)
+## Before: catageysa.dat (begin/initial/data)
 ## After:  catage.csv, catageysa.dat, maturity.csv, survey_smb.csv,
 ##         survey_smh.csv, wcatch.csv, wstock.csv (data)
 
@@ -10,7 +10,7 @@ source("utilities.R")
 mkdir("data")
 
 ## Read data
-cp("begin/data/catageysa.dat", "data")  # later moved to input
+cp("begin/initial/data/catageysa.dat", "data")  # later moved to input
 txt <- readLines("data/catageysa.dat")
 
 ## Extract tables
