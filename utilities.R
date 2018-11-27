@@ -47,10 +47,10 @@ extractInput <- function(txt)
                          nlines=1, quiet=TRUE)[1]
   surveylastage <- scan(text=txt, skip=grep("ages for survey",txt)[1],
                         nlines=1, quiet=TRUE)[2]
-  smb <- data.frame(Year=surveyfirstyear:surveylastyear,
-                    read.table(text=txt, skip=grep("#data",txt)[1],
-                               nrows=surveylastyear-surveyfirstyear+1))
-  names(smb) <- c("Year", surveyfirstage:surveylastage)
+  survey_smb <- data.frame(Year=surveyfirstyear:surveylastyear,
+                           read.table(text=txt, skip=grep("#data",txt)[1],
+                                      nrows=surveylastyear-surveyfirstyear+1))
+  names(survey_smb) <- c("Year", surveyfirstage:surveylastage)
 
   ## 6  Autumn survey (SMH)
   surveyfirstyear2 <- scan(text=txt, skip=grep("Survey data",txt)[2],
@@ -61,12 +61,12 @@ extractInput <- function(txt)
                           nlines=1, quiet=TRUE)[1]
   surveylastage2 <- scan(text=txt, skip=grep("ages for survey",txt)[2],
                          nlines=1, quiet=TRUE)[2]
-  smh <- data.frame(Year=surveyfirstyear2:surveylastyear2,
-                    read.table(text=txt, skip=grep("#data",txt)[2],
-                               nrows=surveylastyear2-surveyfirstyear2+1))
-  names(smh) <- c("Year", surveyfirstage2:surveylastage2)
-  smh[smh<0] <- NA
+  survey_smh <- data.frame(Year=surveyfirstyear2:surveylastyear2,
+                           read.table(text=txt, skip=grep("#data",txt)[2],
+                                      nrows=surveylastyear2-surveyfirstyear2+1))
+  names(survey_smh) <- c("Year", surveyfirstage2:surveylastage2)
+  survey_smh[survey_smh<0] <- NA
 
   list(catage=catage, wcatch=wcatch, maturity=maturity,
-       wstock=wstock, smb=smb, smh=smh)
+       wstock=wstock, survey_smb=survey_smb, survey_smh=survey_smh)
 }
