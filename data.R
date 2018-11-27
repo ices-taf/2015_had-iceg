@@ -1,8 +1,8 @@
 ## Preprocess data, write TAF data tables
 
-## Before: catageysa.dat (begin/initial/data)
-## After:  catage.csv, catageysa.dat, maturity.csv, survey_smb.csv,
-##         survey_smh.csv, wcatch.csv, wstock.csv (data)
+## Before: catageysa.dat (bootstrap/data)
+## After:  catage.csv, maturity.csv, survey_smb.csv, survey_smh.csv, wcatch.csv,
+##         wstock.csv (data)
 
 library(icesTAF)
 source("utilities.R")
@@ -10,8 +10,7 @@ source("utilities.R")
 mkdir("data")
 
 ## Read data
-cp("begin/initial/data/catageysa.dat", "data")  # later moved to input
-txt <- readLines("data/catageysa.dat")
+txt <- readLines("bootstrap/data/catageysa.dat")
 
 ## Extract tables
 data <- extractInput(txt)
