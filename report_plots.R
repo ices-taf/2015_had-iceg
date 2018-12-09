@@ -19,6 +19,6 @@ plot(SSB ~ Year, x, type="l", lwd=2, ylim=lim(x$SSB), yaxs="i",
 dev.off()
 
 tafpng("harvest_rate")
-plot(HR ~ Year, x, subset=Year<=2014, type="l", lwd=2, ylim=lim(x$HR),
+plot(HR ~ Year, x, subset=Year<=2014, type="l", lwd=4, ylim=lim(x$HR),
      yaxs="i", ylab="Harvest rate", main="Harvest rate")
 dev.off()
