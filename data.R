@@ -8,7 +8,8 @@ library(icesTAF)
 source("utilities.R")
 
 mkdir("data")
-
+## Execute process.bib
+taf.bootstrap()
 ## Read data
 txt <- readLines("bootstrap/data/catageysa.dat")
 
