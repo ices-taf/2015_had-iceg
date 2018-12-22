@@ -1,6 +1,6 @@
 ## Run analysis, write model results
 
-## Before: catageysa (bootstrap/software), catageysa.dat (bootstrap/data)
+## Before: catageysa.zip (bootstrap/software), catageysa.dat (bootstrap/data)
 ## After:  resultsbyyear, resultsbyyearandage (model)
 
 library(icesTAF)
