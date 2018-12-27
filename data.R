@@ -9,11 +9,8 @@ source("utilities.R")
 
 mkdir("data")
 
-## Read data
-txt <- readLines("bootstrap/data/catageysa.dat")
-
 ## Extract tables
-data <- extractInput(txt)
+data <- extractData("bootstrap/data/catageysa.dat")
 
 ## Write tables to data directory
 setwd("data")

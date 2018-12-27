@@ -1,6 +1,7 @@
-extractInput <- function(txt)
-### txt: Icelandic haddock input file contents in readLines format
+extractData <- function(datafile)
 {
+  txt <- readLines(datafile)
+
   ## 0  Dimensions
   ## Variable names from catageysa.tpl
   firstyear <- scan(text=txt, skip=1, nlines=1, quiet=TRUE)[1]
