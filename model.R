@@ -8,7 +8,7 @@ library(icesTAF)
 mkdir("model")
 
 ## Get model executable
-exefile <- if(os.unix()) "catageysa" else "catageysa.exe"
+exefile <- if(os.linux()) "catageysa" else "catageysa.exe"
 taf.unzip("bootstrap/software/catageysa.zip", files=exefile, exdir="model")
 
 ## Get model input file
