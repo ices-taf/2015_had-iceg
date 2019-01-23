@@ -1,21 +1,2 @@
-Started analysis @ 19:05:53, 08 January 2019running
-  'D:\programs\R\R-3.5\bin\x64\Rterm.exe --slave --no-restore -e icesTAF::sourceAll()'
+Started analysis @ 12:15:34, 23 January 2019Fatal error: cannot open file 'bootstrap.R': No such file or directory
 
-[19:05:54] data.R running...
-[19:05:54]   data.R done
-[19:05:54] model.R running...
-Error in os.linux() : could not find function "os.linux"
-[19:05:54]   model.R failed
-[19:05:54] output.R running...
-Error in file(file, "rt") : cannot open the connection
-In addition: Warning message:
-In file(file, "rt") :
-  cannot open file 'model/resultsbyyear': No such file or directory
-[19:05:54]   output.R failed
-[19:05:54] report.R running...
-Error in file(file, "rt", encoding = fileEncoding) : 
-  cannot open the connection
-In addition: Warning message:
-In file(file, "rt", encoding = fileEncoding) :
-  cannot open file 'output/summary.csv': No such file or directory
-[19:05:54]   report.R failed
