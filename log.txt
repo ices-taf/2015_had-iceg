@@ -1,5 +1,5 @@
-Started analysis @ 12:15:39, 23 January 2019running
-  'D:\programs\R\R-3.5.2\bin\x64\Rterm.exe --slave --no-restore -e icesTAF::sourceAll()'
+Started analysis @ 12:55:14, 23 January 2019running
+  'D:\programs\R\R-3.5.2\bin\x64\Rterm.exe --slave --no-restore -e icesTAF::taf.bootstrap()'
 
 Error in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]) : 
   there is no package called 'stringr'
