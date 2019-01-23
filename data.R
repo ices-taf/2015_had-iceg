@@ -4,6 +4,8 @@
 ## After:  catage.csv, maturity.csv, survey_smb.csv, survey_smh.csv, wcatch.csv,
 ##         wstock.csv (data)
 
+## debugging change to force run - 1
+
 library(icesTAF)
 source("utilities.R")
 
