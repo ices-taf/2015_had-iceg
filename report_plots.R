@@ -15,7 +15,7 @@ x <- div(x, c("Rec","B3plus","SSB","RefB","Landings"))
 ## Plots
 taf.png("biomass")
 plot(SSB~Year, x, type="l", lwd=2, ylim=lim(x$SSB), yaxs="i",
-     ylab="SSB (1000 t)", main="Biomass :)")
+     ylab="SSB (1000 t)", main="Biomass")
 dev.off()
 
 taf.png("harvest_rate")
