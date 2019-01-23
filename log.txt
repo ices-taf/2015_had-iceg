@@ -1,2 +1,7 @@
-Started analysis @ 12:15:34, 23 January 2019Fatal error: cannot open file 'bootstrap.R': No such file or directory
+Started analysis @ 12:15:39, 23 January 2019running
+  'D:\programs\R\R-3.5.2\bin\x64\Rterm.exe --slave --no-restore -e icesTAF::sourceAll()'
 
+Error in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]) : 
+  there is no package called 'stringr'
+Calls: :: ... tryCatch -> tryCatchList -> tryCatchOne -> <Anonymous>
+Execution halted
