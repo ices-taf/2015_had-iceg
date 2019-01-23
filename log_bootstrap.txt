@@ -1,6 +1,6 @@
-Started analysis @ 13:50:07, 23 January 2019
+Started analysis @ 13:53:00, 23 January 2019
 running
   'D:\programs\R\R-3.5.2\bin\x64\Rterm.exe --slave --no-restore -e icesTAF::taf.bootstrap()'
 
-[13:50:07] Bootstrap procedure running...
-[13:50:07] Bootstrap procedure done
+[13:53:01] Bootstrap procedure running...
+[13:53:01] Bootstrap procedure done
