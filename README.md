@@ -1,4 +1,5 @@
-# Icelandic haddock
+# 2015_had-iceg
+2015 - Haddock in Division Va (Icelandic haddock) - NWWG
 
 ## How to run
 
