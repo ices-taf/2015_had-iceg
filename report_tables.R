@@ -12,8 +12,7 @@ mkdir("report")
 ## catage (plus group)
 catage <- read.taf("data/catage.csv")
 catage$"10" <- rowSums(catage[as.character(10:14)])
-catage <- catage[c("Year", as.character(2:10))]
-names(catage)[names(catage)=="10"] <- "10+"
+catage <- plus(catage[c("Year", as.character(2:10))])
 write.taf(catage, "report/catage.csv")
 
 ## survey_smh (skip year)
