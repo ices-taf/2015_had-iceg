@@ -12,3 +12,11 @@ library(icesTAF)
 taf.bootstrap()
 sourceAll()
 ```
+
+## Explore results
+
+To view the results created on the TAF server, browse the
+[GitHub taf branch](https://github.com/ices-taf/2015_had-iceg/tree/taf).
+
+Assessments results can also be browsed on the
+[TAF application](https://taf.ices.dk/app/stock#!/2015/had-iceg).
