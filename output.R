@@ -37,6 +37,6 @@ row.names(fatage) <- NULL
 fatage[fatage<0] <- NA
 
 ## Write tables to output directory
-write.taf(summary, dir="output")  # 2.1
-write.taf(natage, dir="output")   # 2.2
-write.taf(fatage, dir="output")   # 2.3
+write.taf(natage, dir="output")
+write.taf(fatage, dir="output")
+write.taf(summary, dir="output")
