@@ -1,6 +1,6 @@
 ## Preprocess data, write TAF data tables
 
-## Before: catageysa.dat (bootstrap/data)
+## Before: catageysa.dat (boot/data)
 ## After:  catage.csv, maturity.csv, survey_smb.csv, survey_smh.csv, wcatch.csv,
 ##         wstock.csv (data)
 
@@ -10,7 +10,7 @@ source("utilities.R")
 mkdir("data")
 
 ## Extract tables
-data <- extractData("bootstrap/data/catageysa.dat")
+data <- extractData("boot/data/catageysa.dat")
 
 ## Write tables to data directory
 setwd("data")
