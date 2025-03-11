@@ -10,7 +10,7 @@ mkdir("report")
 ## Trim year, change units
 summary <- read.taf("output/summary.csv")
 x <- summary[summary$Year<=2016,]
-x <- div(x, c("Rec","B3plus","SSB","RefB","Landings"))
+x <- div(x, c("Rec", "B3plus", "SSB", "RefB", "Landings"))
 
 ## Plots
 taf.png("biomass")
