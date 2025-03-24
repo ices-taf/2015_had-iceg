@@ -2,8 +2,8 @@ extractData <- function(datafile)
 {
   txt <- readLines(datafile)
 
-  ## 0  Dimensions
-  ## Variable names from catageysa.tpl
+  # 0  Dimensions
+  # Variable names from catageysa.tpl
   firstyear <- scan(text=txt, skip=1, nlines=1, quiet=TRUE)[1]
   lastyear <- scan(text=txt, skip=1, nlines=1, quiet=TRUE)[2]
   firstdatayear <- scan(text=txt, skip=1, nlines=1, quiet=TRUE)[3]
@@ -15,31 +15,31 @@ extractData <- function(datafile)
   nyrs <- lastyear - firstyear + 1
   ndatayears <- lastdatayear - firstdatayear + 1
 
-  ## 1  Catch at age
+  # 1  Catch at age
   catage <- data.frame(Year=firstyear:lastyear,
                        read.table(text=txt, skip=grep("Landa.*ur afli",txt),
                                   nrows=nyrs))
   names(catage) <- c("Year", a1:nages)
 
-  ## 2  Catch weights
+  # 2  Catch weights
   wcatch <- data.frame(Year=firstdatayear:(lastdatayear+4),
                        read.table(text=txt, skip=grep("Weights in catch",txt),
                                   nrows=ndatayears+4))
   names(wcatch) <- c("Year", a1:nages)
 
-  ## 3  Maturity
+  # 3  Maturity
   maturity <- data.frame(Year=firstdatayear:(lastdatayear+4),
                          read.table(text=txt, skip=grep("sexual maturity",txt),
                                     nrows=ndatayears+4))
   names(maturity) <- c("Year", a1:nages)
 
-  ## 4  Stock weights
+  # 4  Stock weights
   wstock <- data.frame(firstdatayear:(lastdatayear+4),
                        read.table(text=txt, skip=grep("Stockweights",txt),
                                   nrows=ndatayears+4))
   names(wstock) <- c("Year", 1:nages)
 
-  ## 5  Spring survey (SMB)
+  # 5  Spring survey (SMB)
   surveyfirstyear <- scan(text=txt, skip=grep("Survey data",txt)[1],
                           nlines=1, quiet=TRUE)[1]
   surveylastyear <- scan(text=txt, skip=grep("Survey data",txt)[1],
@@ -53,7 +53,7 @@ extractData <- function(datafile)
                                       nrows=surveylastyear-surveyfirstyear+1))
   names(survey.smb) <- c("Year", surveyfirstage:surveylastage)
 
-  ## 6  Autumn survey (SMH)
+  # 6  Autumn survey (SMH)
   surveyfirstyear2 <- scan(text=txt, skip=grep("Survey data",txt)[2],
                            nlines=1, quiet=TRUE)[1]
   surveylastyear2 <- scan(text=txt, skip=grep("Survey data",txt)[2],
