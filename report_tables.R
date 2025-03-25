@@ -1,4 +1,4 @@
-# Prepare tables for report
+# Produce tables for report
 
 # Before: catage.csv, maturity.csv, survey_smh.csv, wcatch.csv,
 #         wstock.csv (data), fatage.csv, natage.csv, summary.csv (output)

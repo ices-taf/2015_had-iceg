@@ -1,4 +1,4 @@
-# Extract results of interest, write TAF output tables
+# Extract results of interest, write CSV output tables
 
 # Before: resultsbyyear, resultsbyyearandage (model)
 # After:  fatage.csv, natage.csv, summary.csv (output)

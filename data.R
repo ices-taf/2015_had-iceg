@@ -1,4 +1,4 @@
-# Preprocess data, write TAF data tables
+# Prepare data, write CSV data tables
 
 # Before: catageysa.dat (boot/data)
 # After:  catage.csv, maturity.csv, survey_smb.csv, survey_smh.csv, wcatch.csv,

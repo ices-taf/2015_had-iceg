@@ -1,4 +1,4 @@
-# Prepare plots for report
+# Produce plots for report
 
 # Before: summary.csv (output)
 # After:  biomass.png, harvest_rate.png (report)
